@@ -1,58 +1,38 @@
-# Turborepo Tailwind CSS starter
+# Token Tuner Monorepo
 
-This Turborepo starter is maintained by the Turborepo core team.
+This repository contains all the web based code for [Token Tuner](https://tokentuner.xyz).
 
-## Using this example
+> [!TIP]
+> see contracts at [`tt-forge`](https://github.com/thisispalash/tt-forge)
 
-Run the following command:
+## Repository structure
+> Repo prefix ~ `@tt/`
 
-```sh
-npx create-turbo@latest -e with-tailwind
-```
+### Apps
 
-## What's inside?
+These are the main user facing applications for Token Tuner.
 
-This Turborepo includes the following packages/apps:
+[`docs`](./apps/docs/) Contains code for the [documentation site](https://docs.tokentuner.xyz).
 
-### Apps and Packages
+[`web`](./apps/web/) Contains code for the [main site](https://tokentuner.xyz).
 
-- `docs`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### Packages
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+These are the packages consumed by the apps.
 
-### Building packages/ui
+[`components`](./packages/components/) Stub React component library, shared by all apps.
 
-This example is set up to produce compiled styles for `ui` components into the `dist` directory. The component `.tsx` files are consumed by the Next.js apps directly using `transpilePackages` in `next.config.ts`. This was chosen for several reasons:
+[`tailwind-config`](./packages/tailwind-config/) Shared tailwind customizations.
 
-- Make sharing one `tailwind.config.ts` to apps and packages as easy as possible.
-- Make package compilation simple by only depending on the Next.js Compiler and `tailwindcss`.
-- Ensure Tailwind classes do not overwrite each other. The `ui` package uses a `ui-` prefix for it's classes.
-- Maintain clear package export boundaries.
+### Packages (dev)
 
-Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update the `tailwind.config.ts` in your apps to be aware of your package locations, so it can find all usages of the `tailwindcss` class names for CSS compilation.
+These packages are important during building, or regular dev stuff.
 
-For example, in [tailwind.config.ts](packages/tailwind-config/tailwind.config.ts):
+[`eslint-config`](./packages/eslint-config/) Shared eslint configurations for the entire repo.
 
-```js
-  content: [
-    // app content
-    `src/**/*.{js,ts,jsx,tsx}`,
-    // include packages if not transpiling
-    "../../packages/ui/*.{js,ts,jsx,tsx}",
-  ],
-```
+[`typescript-config`](./packages/typescript-config/) Shared `tsconfig.json`s for the entire repo.
 
-If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer` dependencies from the `ui` package.
+### Miscellaneous
 
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [Tailwind CSS](https://tailwindcss.com/) for styles
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+This [folder](./_misc/) contains notes and assets not necessarily used by the code. The purpose 
+of this folder is to house any information for hackathons or grants or lore documentation.
