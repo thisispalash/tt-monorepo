@@ -1,7 +1,40 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
-@theme {
-  --blue-1000: #2a8af6;
-  --purple-1000: #a853ba;
-  --red-1000: #e92a67;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #f4f5f6;
+
+  --red: #fa9078;
+  --green: #40d397;
+
+  --font-default: "Sour Gummy", sans-serif;
+}
+
+.exports {
+  --color-red: var(--red);
+  --color-green: var(--green);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-default);
+}
+
+@theme inline {
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-red: var(--red);
+  --color-green: var(--green);
+
+  /** @dev needed for tooltip */
+  --color-primary: var(--foreground);
+  --color-primary-foreground: var(--background);
+  
+  --font-default: var(--font-default);
 }
