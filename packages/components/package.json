@@ -1,6 +1,6 @@
 {
-  "name": "@repo/ui",
-  "version": "0.0.0",
+  "name": "@tt/components",
+  "version": "0.1.0",
   "sideEffects": [
     "**/*.css"
   ],
@@ -11,7 +11,7 @@
     "./styles.css": "./dist/index.css",
     "./*": "./dist/*.js"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "build:styles": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
     "build:components": "tsc",
@@ -24,9 +24,9 @@
     "react": "^19"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/tailwind-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@tt/eslint-config": "workspace:*",
+    "@tt/tailwind-config": "workspace:*",
+    "@tt/typescript-config": "workspace:*",
     "@tailwindcss/cli": "^4.1.5",
     "@types/react": "^19.1.0",
     "eslint": "^9.30.0",

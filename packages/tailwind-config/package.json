@@ -1,8 +1,9 @@
 {
-  "name": "@repo/tailwind-config",
-  "version": "0.0.0",
+  "name": "@tt/tailwind-config",
+  "version": "0.1.0",
   "type": "module",
   "private": true,
+  "license": "Apache-2.0",
   "exports": {
     ".": "./shared-styles.css",
     "./postcss": "./postcss.config.js"

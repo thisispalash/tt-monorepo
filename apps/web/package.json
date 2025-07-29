@@ -1,8 +1,9 @@
 {
-  "name": "web",
-  "version": "1.0.0",
+  "name": "@tt/web",
+  "version": "0.1.0",
   "type": "module",
   "private": true,
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "next dev --port 3001 --turbopack",
     "build": "next build",
@@ -11,16 +12,16 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
+    "@tt/components": "workspace:*",
     "next": "^15.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.3.0",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/tailwind-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@tt/eslint-config": "workspace:*",
+    "@tt/tailwind-config": "workspace:*",
+    "@tt/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4.1.5",
     "@types/node": "^22.15.30",
     "@types/react": "^19.1.0",

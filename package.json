@@ -1,6 +1,8 @@
 {
-  "name": "with-tailwind",
+  "name": "token-tuner-monorepo",
   "private": true,
+  "version": "0.1.0",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
