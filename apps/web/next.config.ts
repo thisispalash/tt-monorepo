@@ -7,6 +7,20 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/docs',
+        destination: 'https://docs.tokentuner.xyz',
+        permanent: true,
+      },
+      {
+        source: "/docs/:path*",
+        destination: "https://docs.tokentuner.xyz/:path*",
+        permanent: true,
+      },
+    ]
+  }
 };
 
 export default nextConfig;
