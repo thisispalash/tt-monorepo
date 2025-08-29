@@ -8,16 +8,21 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   async redirects() {
+    const isDev = process.env.NODE_ENV === "development";
+    const docsUrl = isDev 
+      ? "http://localhost:3000" 
+      : "https://docs.tokentuner.xyz";
+
     return [
       {
-        source: '/docs',
-        destination: 'https://docs.tokentuner.xyz',
-        permanent: true,
+        source: "/docs",
+        destination: docsUrl,
+        permanent: !isDev, // temporary redirect in dev, permanent in production
       },
       {
         source: "/docs/:path*",
-        destination: "https://docs.tokentuner.xyz/:path*",
-        permanent: true,
+        destination: `${docsUrl}/:path*`,
+        permanent: !isDev,
       },
     ]
   }
