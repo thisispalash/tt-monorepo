@@ -1,6 +1,4 @@
-/* @import "@tt/tailwind-config"; */
-@import "../../../packages/tailwind-config/shared-styles.css";
-
+@import "@tt/tailwind-config";
 
 @theme inline {
   --font-default: var(--font-default);
