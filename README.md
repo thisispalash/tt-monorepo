@@ -36,3 +36,11 @@ These packages are important during building, or regular dev stuff.
 
 This [folder](./_misc/) contains notes and assets not necessarily used by the code. The purpose 
 of this folder is to house any information for hackathons or grants or lore documentation.
+
+## Supported Networks
+
+These are currently supported networks for the daily defi game. Contract addresses coming soon. Please follow https://github.com/thisispalash/tt-monorepo/issues/5.
+
+### Flow Blockchain
+
+### Celo Network
