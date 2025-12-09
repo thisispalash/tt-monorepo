@@ -1,46 +1,27 @@
 # Token Tuner Monorepo
 
-This repository contains all the web based code for [Token Tuner](https://tokentuner.xyz).
+This repository is the official monorepo for 
+[Token Tuner](https://tokentuner.xyz).
 
-> [!TIP]
-> see contracts at [`tt-forge`](https://github.com/thisispalash/tt-forge)
+## Directory Structure
 
-## Repository structure
-> Repo prefix ~ `@tt/`
+The code is divided into three main directories, the web-server, the onchain 
+elements, and the indexer.
 
-### Apps
+- [`server`](./server) This contains code for the web-server. Uses Django as 
+the backend framework to allow for [htmx](https://htmx.org). 
+[See why](./server/README.md#why-htmx).
 
-These are the main user facing applications for Token Tuner.
+- [`onchain`](./onchain) This directory contains all code related to any 
+onchain elements. For now, these include the two sub-directories,
+  - [`sol`](./onchain/sol/) Contains all Solidity contracts for EVM targets
+  - [`cdc`](./onchain/cdc/) Contains all Cadence code to leverage FLOW's [Forte
+  upgrades](https://developers.flow.com/blockchain-development-tutorials/forte/scheduled-transactions/scheduled-transactions-introduction).
 
-[`docs`](./apps/docs/) Contains code for the [documentation site](https://docs.tokentuner.xyz).
+- [`indexer`](./indexer) This directory contains the code for the self-hosted 
+indexer, [HyperIndex](https://docs.envio.dev/docs/HyperIndex/self-hosting).
 
-[`web`](./apps/web/) Contains code for the [main site](https://tokentuner.xyz).
+## License Information
 
-### Packages
-
-These are the packages consumed by the apps.
-
-[`components`](./packages/components/) Stub React component library, shared by all apps.
-
-[`tailwind-config`](./packages/tailwind-config/) Shared tailwind customizations.
-
-### Packages (dev)
-
-These packages are important during building, or regular dev stuff.
-
-[`eslint-config`](./packages/eslint-config/) Shared eslint configurations for the entire repo.
-
-[`typescript-config`](./packages/typescript-config/) Shared `tsconfig.json`s for the entire repo.
-
-### Miscellaneous
-
-This [folder](./_misc/) contains notes and assets not necessarily used by the code. The purpose 
-of this folder is to house any information for hackathons or grants or lore documentation.
-
-## Supported Networks
-
-These are currently supported networks for the daily defi game. Contract addresses coming soon. Please follow https://github.com/thisispalash/tt-monorepo/issues/5.
-
-### Flow Blockchain
-
-### Celo Network
+All code is currently licensed under [Apache-2.0](./LICENSE). This however is
+subject to change.

@@ -1,5 +1,0 @@
-@import "@tt/tailwind-config";
-
-@theme inline {
-  --font-default: var(--font-default);
-}
