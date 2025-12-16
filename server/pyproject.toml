@@ -18,7 +18,9 @@ documentation = "https://docs.tokentuner.xyz/"
 repository = "https://github.com/thisispalash/tt-monorepo"
 
 [tool.poetry]
-packages = [{include = "server", from = "src"}]
+packages = [
+    {include = "server"}
+]
 
 
 [build-system]
